@@ -1,0 +1,17 @@
+body{
+  margin: 0;
+  padding: 70px 0 0;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "MS PGothic", sans-serif;
+}
+h1,h2,h3,ul,p,dl,dt,dd{
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+a,
+a:link {
+  text-decoration: none;
+  color: #4c566c;
+}
