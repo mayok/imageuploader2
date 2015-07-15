@@ -58,10 +58,12 @@
   border-radius: 6px;
   margin: 0 auto;
 }
+.btn[disabled] {
+  background: grey;
+}
 input[type="file"] {
   display: none;
 }
-
 .clearfix:after {
   content: "";
   display: block;
@@ -89,7 +91,6 @@ input[type="file"] {
   .container {
     width: 75%;
   }
-  .navbar-right {
 
   .navbar-right li {
     display: inline-block;
