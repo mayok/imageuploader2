@@ -5,7 +5,6 @@
   <title></title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,7 +23,7 @@
 
   <div class="main">
     <div class="container">
-      <ul id="thumbnail" class="clearfix">
+      <ul id="thumbnail">
       <?php
       $list = glob(dirname(__FILE__)."/images/*.{jpg,jpeg,gif,png}", GLOB_BRACE);
       foreach($list as $key => $value){

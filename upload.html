@@ -5,7 +5,6 @@
   <title></title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,18 +24,19 @@
   </div>
 
   <div class="main">
-    <div class="container">
-      <div id="drop-zone">
-        <p>アップロードするファイルをドロップ</p>
-        <p>または</p>
-        <div class="btn-group">
-          <input id="demo-input" type="file" multiple />
-          <button id="input-btn" class="btn">ファイルを選択</button>
-        </div>
+    <div class="border border-black">
+      <div class="container">
+        <span id="preview"></span>
+        <button id="btn" class="btn btn-square"></button>
+        <!--
+        <span id="next"></span>
+        -->
       </div>
-      <button id="upload-btn" class="btn">投稿</button>
     </div>
+    <input id="demo-input" type="file" />
+    <button id="upload-btn" class="btn">投稿</button>
   </div>
+  <div id="drop-here">&nbsp;</div>
 
   <!-- Javascript
   -->
