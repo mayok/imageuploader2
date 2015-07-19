@@ -11,7 +11,7 @@
   <div class="header">
     <div class="container">
       <h1>
-        <a class="logo" href="#">logo</a>
+        <a class="logo" href="./index.php">logo</a>
       </h1>
       <div class="navbar-right">
         <ul>
