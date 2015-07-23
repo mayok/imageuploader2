@@ -54,7 +54,7 @@ function upload(file) {
     }
   }
   xmlhttp.open("POST", "upload.php");
-  xmlhttp.send("data="+file);
+  xmlhttp.send(file);
 }
 
 function init() {
