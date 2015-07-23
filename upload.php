@@ -15,9 +15,8 @@ if($file_type[0] == "image"){
   if(!file_exists($fqn)) {
     file_put_contents($fqn, $file);
     chmod($fqn, 0644);
-  }
-  else {
-    http_response_code(500);
+  } else {
+    http_response_code(418);
   }
 }
 

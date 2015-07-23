@@ -53,7 +53,7 @@ function upload(file) {
       var success = document.querySelector(".fade");
       success.className += " success";
       success.innerHTML = "success file uploaded.";
-    } else {
+    } else if(xmlhttp.readyState == 4 && xmlhttp.status == 418) {
       var fail = document.querySelector(".fade");
       fail.className += " fail";
       fail.innerHTML = "failed to upload file.";
