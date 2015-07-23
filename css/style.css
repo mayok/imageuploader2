@@ -122,12 +122,19 @@ html, body {
   transition: opacity .5s ease-in-out;
   opacity: 0;
 }
-.success {
+.success,
+.fail {
   opacity: 1;
-  background: #98d98e;
   padding: 4px 20px;
   border-radius: 8px;
 }
+.success {
+  background: #98d98e;
+}
+.fail {
+  background: #e9546b;
+}
+
 input[type="file"] {
   display: none;
 }

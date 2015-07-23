@@ -9,9 +9,16 @@ $finfo = finfo_open(FILEINFO_MIME_TYPE);
 $mime_type = finfo_file($finfo, $tmpfile);
 $file_type = explode("/", $mime_type);
 
+$fqn = dirname(__FILE__).'/images/'.$filename.".".$file_type[1];
+
 if($file_type[0] == "image"){
-  file_put_contents(dirname(__FILE__).'/images/'.$filename.".".$file_type[1], $file);
-  chmod(dirname(__FILE__).'/images/'.$filename.".".$file_type[1], 0644);
+  if(!file_exists($fqn)) {
+    file_put_contents($fqn, $file);
+    chmod($fqn, 0644);
+  }
+  else {
+    http_response_code(500);
+  }
 }
 
 unlink($tmpfile);
