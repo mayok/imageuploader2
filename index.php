@@ -25,8 +25,11 @@
     <div class="container">
       <ul id="thumbnail">
       <?php
-      $list = glob(dirname(__FILE__)."/images/*.{jpg,jpeg,gif,png}", GLOB_BRACE);
-      foreach($list as $key => $value){
+      $files = glob(dirname(__FILE__)."/images/*.{jpg,jpeg,gif,png}", GLOB_BRACE);
+      usort($files, function($a, $b) {
+        return filemtime($a) < filemtime($b);
+      });
+      foreach($files as $key => $value){
         $p = pathinfo($value);
         echo '<li id="'.$p["filename"].'"><img src="'."./images/".$p["basename"].'" width="50" height="50" border=0></li>';
       }
