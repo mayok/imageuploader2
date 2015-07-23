@@ -107,19 +107,27 @@ html, body {
   vertical-align: middle;
   max-width: 350px;
 }
-/*
-#next {
-  display: none;
-}
-#next::after {
-  content: "\f067";
-  font-family: FontAwesome;
-  font-size: 12em;
-  vertical-align: middle;
-  margin-right: -50px;
-}
-*/
+.fixed-center {
+  transition: opacity 1s ease-in-out;
 
+  position: fixed;
+  top: 45px;
+  left: 0;
+  right: 0;
+  height: 0;
+  text-align: center;
+}
+.fade {
+  display: inline-block;
+  transition: opacity .5s ease-in-out;
+  opacity: 0;
+}
+.success {
+  opacity: 1;
+  background: #98d98e;
+  padding: 4px 20px;
+  border-radius: 8px;
+}
 input[type="file"] {
   display: none;
 }

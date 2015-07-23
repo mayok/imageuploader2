@@ -50,7 +50,9 @@ function upload(file) {
   xmlhttp.onreadystatechange = function() {
     if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
       // show `successfully uploaded' message with modal
-      console.log("successfully file uploaded");
+      var success = document.querySelector(".fade");
+      success.className += " success";
+      success.innerHTML = "success file uploaded.";
     }
   }
   xmlhttp.open("POST", "upload.php");
